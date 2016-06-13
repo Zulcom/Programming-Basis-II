@@ -1,0 +1,5 @@
+4
+Pupkin 3 4 4 5
+Brodt 5 4 5 3
+Vasiliev 5 5 5 5
+Ivanov 3 3 4 4
