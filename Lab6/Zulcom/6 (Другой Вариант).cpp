@@ -1,11 +1,11 @@
-#include <cmath>
+п»ї#include <cmath>
 #include <clocale>
 #include <iostream>
 #include <ctime>
 using namespace std;
 struct node { 
-	int info; // info строка в структуре, хранит данные
-	node *link; // ссылка на след.элемент
+	int info; // info СЃС‚СЂРѕРєР° РІ СЃС‚СЂСѓРєС‚СѓСЂРµ, С…СЂР°РЅРёС‚ РґР°РЅРЅС‹Рµ
+	node *link; // СЃСЃС‹Р»РєР° РЅР° СЃР»РµРґ.СЌР»РµРјРµРЅС‚
 };
 void print(node * l) {
 	node * k = l;
@@ -21,28 +21,28 @@ int main() {
 	int inputData, N; 
 	node *thisNode, *left, *right;
 
-	cout << "Введите количество элементов: ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ: ";
 	cin >> N;
-	cout << "Bведите число: ";
+	cout << "BРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ";
 	cin >> inputData;
-	// Первый элемент
+	// РџРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚
 	thisNode = new node;
 	thisNode->link = NULL;
 	thisNode->info = inputData;
 	left = right = thisNode;
-	// Заполнение остальных элементов 
+	// Р—Р°РїРѕР»РЅРµРЅРёРµ РѕСЃС‚Р°Р»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ 
 	for (int i = 0; i < N - 1; ++i) {
-		cout << "Bведите число: ";
+		cout << "BРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ";
 		cin >> inputData;
 		thisNode = new node;
 		thisNode->link = NULL;
 		thisNode->info = inputData;
-		right->link = thisNode; // Добавление узла справа
+		right->link = thisNode; // Р”РѕР±Р°РІР»РµРЅРёРµ СѓР·Р»Р° СЃРїСЂР°РІР°
 		right = thisNode;
 	}
-	cout << "Cписок до преобразования: ";
+	cout << "CРїРёСЃРѕРє РґРѕ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ: ";
 	print(left);
-	/*Добавление узлов */
+	/*Р”РѕР±Р°РІР»РµРЅРёРµ СѓР·Р»РѕРІ */
 	thisNode = left;
 	while (thisNode->link != NULL) {
 		if (thisNode->link->info <0) {
@@ -57,7 +57,7 @@ int main() {
 		thisNode = thisNode->link;
 	}
 
-	cout << "После добавления узлов: ";
+	cout << "РџРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ СѓР·Р»РѕРІ: ";
 	print(left);
 	node *tmp;
 	/*clear quenue */

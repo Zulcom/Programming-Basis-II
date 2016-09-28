@@ -25,14 +25,14 @@ int main()
 	FILE *in, *out;
 	out = fopen("out.txt", "r");
 	in = fopen("in.dat", "wb+");
-	cout << "Ââåäèòå s ñòðîêó:";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ s ÑÑ‚Ñ€Ð¾ÐºÑƒ:";
 	cin >> s;
 	fscanf(out, "%d%d", &n, &m);
 	fwrite(&n, sizeof(int), 1, in);
 	fwrite(&m, sizeof(int), 1, in);
 	int *a = new int[m], 
 		*a1 = new int[m];
-	cout << "\nÌàññèâ:";
+	cout << "\nÐœÐ°ÑÑÐ¸Ð²:";
 	for (int i = 0; i < m*n; i++)
 	{
 		fscanf(out, "%d", &a[i]);
@@ -41,14 +41,14 @@ int main()
 	}
 	fseek(in, ((s - 1)*m + 2)*sizeof(int), SEEK_SET);
 	fread(a1, sizeof(a1), m, in);
-	cout << "\nÑòðîêà:";
+	cout << "\nÐ¡Ñ‚Ñ€Ð¾ÐºÐ°:";
 	for (int i = 0; i < m; i++)
 		cout << a1[i] << " ";
 	int p = func(a1, m);
 	if (p == 1)
-		cout << "×èñåë êðàòíûõ 3 íåò";
+		cout << "Ð§Ð¸ÑÐµÐ» ÐºÑ€Ð°Ñ‚Ð½Ñ‹Ñ… 3 Ð½ÐµÑ‚";
 	else
-		cout << endl << "Ïðîèçâåäåíèå ðàâíî:" << p ;
+		cout << endl << "ÐŸÑ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ñ€Ð°Ð²Ð½Ð¾:" << p ;
 	getchar();
 	getchar();
 	return 0;

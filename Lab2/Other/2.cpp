@@ -31,7 +31,7 @@ int main()
 	ifstream ou1 ("out.txt");
 	if(in!=NULL)
 	{
-	puts("Входные данные из файла:");
+	puts("Р’С…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ РёР· С„Р°Р№Р»Р°:");
 	while(!in.eof())
 	{
 		in.getline(s, 200);
@@ -39,7 +39,7 @@ int main()
 		function(s);
 		ou<<s<<endl;
 	}
-	puts("Выходные данные из файла:");
+	puts("Р’С‹С…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ РёР· С„Р°Р№Р»Р°:");
 	while(!ou1.eof())
 	{
 		ou1.getline(str, 100);
@@ -50,7 +50,7 @@ int main()
 	in.close();
 	}
 	else
-		puts("Фаил не найден"); 
+		puts("Р¤Р°РёР» РЅРµ РЅР°Р№РґРµРЅ"); 
 	system("pause");
 	return 0;
 }

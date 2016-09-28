@@ -25,7 +25,7 @@ int main()
 	fscanf(f1, "%i", &n);
 	fscanf(f1, "%i", &m);
 	int *A = new int[m];
-	cout<<"Âàø ìàññèâ:"<<endl;
+	cout<<"Ð’Ð°Ñˆ Ð¼Ð°ÑÑÐ¸Ð²:"<<endl;
 	for(int i = 0; i<n; i++)
 	{
 		for(int j = 0; j<m; j++)
@@ -40,12 +40,12 @@ int main()
 	}
 	fclose(f1);
 	fclose(f2);
-	cout<<"Ââåäèòå íîìåð ñòðîêè:"<<endl;
+	cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÑ‚Ñ€Ð¾ÐºÐ¸:"<<endl;
 	cin>>k;
 	k--;
 	if(k>=n)
 	{
-		cout<<"Îøèáêà"<<endl;
+		cout<<"ÐžÑˆÐ¸Ð±ÐºÐ°"<<endl;
 		system("pause");
 		return 0;
 	}
@@ -54,7 +54,7 @@ int t = k*m*sizeof(int);
 fseek(f3, t, SEEK_SET);
 fread(A, sizeof(A), m, f3);
 int kl = kol(A, m);
-cout<<"Êîëè÷åñòâî ÷èñåë ìåíüøå 100:"<<kl;
+cout<<"ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ð¸ÑÐµÐ» Ð¼ÐµÐ½ÑŒÑˆÐµ 100:"<<kl;
 system("pause");
 return 0;
 }

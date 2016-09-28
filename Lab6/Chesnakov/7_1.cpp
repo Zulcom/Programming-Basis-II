@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <fstream>
 #include <string>
 #include <clocale>
@@ -19,7 +19,7 @@ int main ()
 	top2 = NULL;
 	string namen, themen;
 	int coastn, koln;
-	printf ("Äàííûå â òåêñòîâîì ôàéëå:\n");
+	printf ("Æ’Ð°Ð½Ð½Ñ‹Ðµ Ð² Ñ‚ÐµÐºÑÑ‚Ð¾Ð²Ð¾Ð¼ Ñ„Ð°Ð¹Ð»Ðµ:\n");
 	printf ("____________________________________________________________\n");
 	while (ft >> namen >> coastn >> koln >> themen)
 	{
@@ -56,9 +56,9 @@ int main ()
 FILE *fbw1, *fbw2;
 char namef1[11], namef2[11];
 printf ("____________________________________________________________\n");
-cout << "Ââåäèòå èìÿ ôàéëà äëÿ çàïèñè æóðíàëîâ òèðàæîì ìåíåå 1000 ýêçåìïëÿðîâ:" << endl;
+cout << "Â¬Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Â¤ Ñ„Ð°Ð¹Ð»Ð° Ð´Ð»Â¤ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ð¶ÑƒÑ€Ð½Ð°Ð»Ð¾Ð² Ñ‚Ð¸Ñ€Ð°Ð¶Ð¾Ð¼ Ð¼ÐµÐ½ÐµÐµ 1000 ÑÐºÐ·ÐµÐ¼Ð¿Ð»Â¤Ñ€Ð¾Ð²:" << endl;
 cin >> namef1;
-cout << "Ââåäèòå èìÿ ôàéëà äëÿ çàïèñè îñòàëüíûõ æóðíàëîâ:" << endl;
+cout << "Â¬Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Â¤ Ñ„Ð°Ð¹Ð»Ð° Ð´Ð»Â¤ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ð¾ÑÑ‚Ð°Ð»ÑŒÐ½Ñ‹Ñ… Ð¶ÑƒÑ€Ð½Ð°Ð»Ð¾Ð²:" << endl;
 cin >> namef2;
 fbw1 = fopen(namef1, "wb");
 fbw2 = fopen(namef2, "wb");
@@ -87,7 +87,7 @@ fbr1 = fopen(namef1, "rb");
 fbr2 = fopen(namef2, "rb");
 rewind(fbr1);
 rewind(fbr2);
-cout <<endl << "Æóðíàëû ñ òèðàæîì ìåíåå 1000:" << endl;
+cout <<endl << "âˆ†ÑƒÑ€Ð½Ð°Ð»Ñ‹ Ñ Ñ‚Ð¸Ñ€Ð°Ð¶Ð¾Ð¼ Ð¼ÐµÐ½ÐµÐµ 1000:" << endl;
 k1 = new journal;
 printf ("____________________________________________________________\n");
 while (fread (&k1 ->name, sizeof(string), 1, fbr1) && fread (&k1 ->coast, sizeof(int), 1, fbr1) && fread (&k1 ->kol, sizeof(int), 1, fbr1) && fread (&k1 ->theme, sizeof(string), 1, fbr1))
@@ -104,7 +104,7 @@ while (fread (&k1 ->name, sizeof(string), 1, fbr1) && fread (&k1 ->coast, sizeof
 		cout << k1 -> theme << endl;
 }
 printf ("____________________________________________________________\n");
-cout << endl << "Äðóãèå æóðíàëû:" << endl;
+cout << endl << "Æ’Ñ€ÑƒÐ³Ð¸Ðµ Ð¶ÑƒÑ€Ð½Ð°Ð»Ñ‹:" << endl;
 printf ("____________________________________________________________\n");
 k2 = new journal;
 while (fread (&k2 ->name, sizeof(string), 1, fbr2) && fread (&k2 ->coast, sizeof(int), 1, fbr2) && fread (&k2 ->kol, sizeof(int), 1, fbr2) && fread (&k2 ->theme, sizeof(string), 1, fbr2))

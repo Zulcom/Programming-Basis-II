@@ -1,4 +1,4 @@
-#include <string>
+ï»¿#include <string>
 #include <iostream>
 #include <clocale>
 #include <fstream>
@@ -20,7 +20,7 @@ int main ()
 	ifstream file1("laba13.txt");
 	ofstream file2("complete laba13.txt");
 	string str;
-	cout << "Òåêñò â èçíà÷ààëüíîì ôàéëå:"<< endl;
+	cout << "Ð¢ÐµÐºÑÑ‚ Ð² Ð¸Ð·Ð½Ð°Ñ‡Ð°Ð°Ð»ÑŒÐ½Ð¾Ð¼ Ñ„Ð°Ð¹Ð»Ðµ:"<< endl;
 	while (!file1.eof())
 	{
 		getline (file1, str);
@@ -29,7 +29,7 @@ int main ()
 	}
 	cout << "________________________________" << endl << endl;
 	ifstream file3("complete laba13.txt");
-	cout << "Òåêñò â êîíå÷íîì ôàéëå:" << endl;
+	cout << "Ð¢ÐµÐºÑÑ‚ Ð² ÐºÐ¾Ð½ÐµÑ‡Ð½Ð¾Ð¼ Ñ„Ð°Ð¹Ð»Ðµ:" << endl;
     while (!file3.eof())
 	{
 		getline (file3, str);

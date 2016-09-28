@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <fstream>
 #include <string>
 #include <clocale>
@@ -7,8 +7,8 @@ struct journal
 {
   string name,
 		 theme;
-  int coast, kol;//Информационные поля
-   journal *next;//Указатель для связи с другим узлом
+  int coast, kol;//РРЅС„РѕСЂРјР°С†РёРѕРЅРЅС‹Рµ РїРѕР»СЏ
+   journal *next;//РЈРєР°Р·Р°С‚РµР»СЊ РґР»СЏ СЃРІСЏР·Рё СЃ РґСЂСѓРіРёРј СѓР·Р»РѕРј
 };
 int main ()
 {
@@ -16,15 +16,15 @@ int main ()
 	ifstream ft ("input.txt");
 	journal *top1, *top2, *k1, *k2;
     top1 = NULL;
-	top2 = NULL;//стеки пусты
-	string namen, themen;//Буферные переменные
+	top2 = NULL;//СЃС‚РµРєРё РїСѓСЃС‚С‹
+	string namen, themen;//Р‘СѓС„РµСЂРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ
 	int coastn, koln;
-	printf ("Данные в текстовом файле:\n");
+	printf ("Р”Р°РЅРЅС‹Рµ РІ С‚РµРєСЃС‚РѕРІРѕРј С„Р°Р№Р»Рµ:\n");
 	printf ("____________________________________________________________\n");
 	while(ft >> namen >> coastn >> koln >> themen)
 	{
-		cout.setf(ios::left);//равнение по левой границе
-		cout.width(15);//ширина поля 15 позиций
+		cout.setf(ios::left);//СЂР°РІРЅРµРЅРёРµ РїРѕ Р»РµРІРѕР№ РіСЂР°РЅРёС†Рµ
+		cout.width(15);//С€РёСЂРёРЅР° РїРѕР»СЏ 15 РїРѕР·РёС†РёР№
 		cout << namen;
 		cout.width(5);
 		cout << coastn;
@@ -36,13 +36,13 @@ int main ()
 
 	    if (koln>0)
         {
-             k1 = new journal; //выделение динамической памяти
-             k1 -> next = top1;//связь с предыдущим узлом
-             k1 -> name = namen; //заполняем информационное поле
+             k1 = new journal; //РІС‹РґРµР»РµРЅРёРµ РґРёРЅР°РјРёС‡РµСЃРєРѕР№ РїР°РјСЏС‚Рё
+             k1 -> next = top1;//СЃРІСЏР·СЊ СЃ РїСЂРµРґС‹РґСѓС‰РёРј СѓР·Р»РѕРј
+             k1 -> name = namen; //Р·Р°РїРѕР»РЅСЏРµРј РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅРѕРµ РїРѕР»Рµ
              k1 -> coast = coastn; 
              k1 -> kol = koln; 
              k1 -> theme = themen; 
-			 top1 = k1; //Вершину стека помещаем на вновь созданный узел
+			 top1 = k1; //Р’РµСЂС€РёРЅСѓ СЃС‚РµРєР° РїРѕРјРµС‰Р°РµРј РЅР° РІРЅРѕРІСЊ СЃРѕР·РґР°РЅРЅС‹Р№ СѓР·РµР»
 			 
         }
 		else         
@@ -60,22 +60,22 @@ int main ()
 FILE *fbw1, *fbw2;
 char namef1[11], namef2[11];
 printf ("____________________________________________________________\n");
-cout << "Введите имя файла для записи журналов тиражом менее 1000 экземпляров:" << endl;
+cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ С„Р°Р№Р»Р° РґР»СЏ Р·Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»РѕРІ С‚РёСЂР°Р¶РѕРј РјРµРЅРµРµ 1000 СЌРєР·РµРјРїР»СЏСЂРѕРІ:" << endl;
 cin >> namef1;
-cout << "Введите имя файла для записи остальных журналов:" << endl;
+cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ С„Р°Р№Р»Р° РґР»СЏ Р·Р°РїРёСЃРё РѕСЃС‚Р°Р»СЊРЅС‹С… Р¶СѓСЂРЅР°Р»РѕРІ:" << endl;
 cin >> namef2;
 fbw1 = fopen(namef1, "wb");
 fbw2 = fopen(namef2, "wb");
 rewind(fbw1);
 rewind(fbw2);
-k1 = top1;//указатель на вершину стека
-while (k1 != NULL)//пока не достигли конца стека
+k1 = top1;//СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІРµСЂС€РёРЅСѓ СЃС‚РµРєР°
+while (k1 != NULL)//РїРѕРєР° РЅРµ РґРѕСЃС‚РёРіР»Рё РєРѕРЅС†Р° СЃС‚РµРєР°
 {
 	fwrite (&k1 -> name, sizeof(string), 1, fbw1);
 	fwrite (&k1 -> coast, sizeof(int), 1, fbw1);
 	fwrite (&k1 -> kol, sizeof(int), 1, fbw1);
 	fwrite (&k1 -> theme, sizeof(string), 1, fbw1);
-	k1 = k1 -> next;//перемещение к следующему узлу
+	k1 = k1 -> next;//РїРµСЂРµРјРµС‰РµРЅРёРµ Рє СЃР»РµРґСѓСЋС‰РµРјСѓ СѓР·Р»Сѓ
 }
 k2 = top2;
 while (k2 != NULL)
@@ -92,7 +92,7 @@ fbw1 = fopen(namef1, "rb");
 fbw2 = fopen(namef2, "rb");
 rewind(fbw1);
 rewind(fbw2);
-cout <<endl << "Журналы с тиражом менее 1000:" << endl;
+cout <<endl << "Р–СѓСЂРЅР°Р»С‹ СЃ С‚РёСЂР°Р¶РѕРј РјРµРЅРµРµ 1000:" << endl;
 k1 = new journal;
 printf ("____________________________________________________________\n");
 while (fread (&k1 ->name, sizeof(string), 1, fbw1) && fread (&k1 ->coast, sizeof(int), 1, fbw1) && fread (&k1 ->kol, sizeof(int), 1, fbw1) && fread (&k1 ->theme, sizeof(string), 1, fbw1))
@@ -109,7 +109,7 @@ while (fread (&k1 ->name, sizeof(string), 1, fbw1) && fread (&k1 ->coast, sizeof
 		cout << k1 -> theme << endl;
 }
 printf ("____________________________________________________________\n");
-cout << endl << "Другие журналы:" << endl;
+cout << endl << "Р”СЂСѓРіРёРµ Р¶СѓСЂРЅР°Р»С‹:" << endl;
 printf ("____________________________________________________________\n");
 k2 = new journal;
 while (fread (&k2 ->name, sizeof(string), 1, fbw2) && fread (&k2 ->coast, sizeof(int), 1, fbw2) && fread (&k2 ->kol, sizeof(int), 1, fbw2) && fread (&k2 ->theme, sizeof(string), 1, fbw2))

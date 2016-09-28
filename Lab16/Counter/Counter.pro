@@ -1,4 +1,4 @@
-TEMPLATE = app
+﻿TEMPLATE = app
 TARGET = counter
 
 QT      += widgets

@@ -1,4 +1,4 @@
-#include <iostream> 
+п»ї#include <iostream> 
 #include <string> 
 #include <clocale>
 
@@ -9,11 +9,11 @@ class Money
 private:
 	long rub, kop;
 public:
-	Money(long Rub, long Kop)// инициализирующий конструктор
+	Money(long Rub, long Kop)// РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	{
 		if (Rub < 0 || Kop < 0)
 		{
-			rub = 0, kop = 0, cerr << "Значения рублей и копеек не должно быть отрицательным!" << endl;
+			rub = 0, kop = 0, cerr << "Р—РЅР°С‡РµРЅРёСЏ СЂСѓР±Р»РµР№ Рё РєРѕРїРµРµРє РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј!" << endl;
 		}
 		else
 		if (Kop <100)
@@ -23,16 +23,16 @@ public:
 			rub = Rub + (Kop / 100), kop = Kop % 100;
 	}
 	 
-	Money(){} // конструктор по умолчанию
-	void PrintEn() { cout << "\n" << rub << " рублей " << kop << " копеек" << endl; }
+	Money(){} // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	void PrintEn() { cout << "\n" << rub << " СЂСѓР±Р»РµР№ " << kop << " РєРѕРїРµРµРє" << endl; }
 
 	long GetRub() { return rub; }
 	long GetKop() { return kop; }
 	
-	void SetRub(long _rub) { if (_rub >0) rub = _rub; else if(_rub< 0) rub=0, cerr << "Значение рубля не может быть отрицательным!" << endl; }
-	void SetKop(long _kop) { if (_kop > 0) kop = _kop; else if(_kop <0) kop=0, cerr<< "Значение копеек не может быть отрицательны!" << endl; }
+	void SetRub(long _rub) { if (_rub >0) rub = _rub; else if(_rub< 0) rub=0, cerr << "Р—РЅР°С‡РµРЅРёРµ СЂСѓР±Р»СЏ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј!" << endl; }
+	void SetKop(long _kop) { if (_kop > 0) kop = _kop; else if(_kop <0) kop=0, cerr<< "Р—РЅР°С‡РµРЅРёРµ РєРѕРїРµРµРє РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹!" << endl; }
 	
-    //Разница в копейках между 1 и 2 объектом 
+    //Р Р°Р·РЅРёС†Р° РІ РєРѕРїРµР№РєР°С… РјРµР¶РґСѓ 1 Рё 2 РѕР±СЉРµРєС‚РѕРј 
 	long Kopeck(Money t)
 	{
 		return (t.GetRub() - rub) *100 + (t.GetKop()-kop);
@@ -45,13 +45,13 @@ class Goods : public Money
 private:
 	string name, code;
 public:
-	Goods(string Name, string Code, long Rub, long Kop) :Money(Rub, Kop) // инициализирующий конструктор
+	Goods(string Name, string Code, long Rub, long Kop) :Money(Rub, Kop) // РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	{
 		name = Name;
 		code = Code;
 	}
 	
-	Goods(){} // конструктор по умолчанию
+	Goods(){} // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	void PrintEn_Goods()
 	{
 		cout << "\n" << name << ' ' << code;
@@ -65,7 +65,7 @@ public:
 	void SetCode(string _code) { code = _code; }
 
 
-	//какое занятие из двух начнется раньше 
+	//РєР°РєРѕРµ Р·Р°РЅСЏС‚РёРµ РёР· РґРІСѓС… РЅР°С‡РЅРµС‚СЃСЏ СЂР°РЅСЊС€Рµ 
 	Goods & Cheaper(Goods g) 
 	{
 		if (Kopeck(g) >= 0) return g; else
@@ -75,35 +75,35 @@ public:
 
 int main()
 {
-	// Создаем, инициализируем первый объект 
+	// РЎРѕР·РґР°РµРј, РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј РїРµСЂРІС‹Р№ РѕР±СЉРµРєС‚ 
 	setlocale(LC_ALL, "rus");
 	long rub, kop;
-	string name, code;  cout << "\n Введите\n Рубли= ";
+	string name, code;  cout << "\n Р’РІРµРґРёС‚Рµ\n Р СѓР±Р»Рё= ";
 	cin >> rub;
-	cout << " Копейки = ";
+	cout << " РљРѕРїРµР№РєРё = ";
 	cin >> kop;
-	cout << " Наименование товара = ";
+	cout << " РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚РѕРІР°СЂР° = ";
 	cin >> name;
-	cout << " Код товара = ";
+	cout << " РљРѕРґ С‚РѕРІР°СЂР° = ";
 	cin >> code;
-	Goods g1(name, code, rub, kop);// используется инициализирующий конструктор
+	Goods g1(name, code, rub, kop);// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	cout << "\nGoods 1 ";
 	g1.PrintEn_Goods();
-	// Создаем, инициализируем второй объект 
-	Goods g2("Хлеб", "458575", 50, 50); // используется инициализирующий конструктор
+	// РЎРѕР·РґР°РµРј, РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј РІС‚РѕСЂРѕР№ РѕР±СЉРµРєС‚ 
+	Goods g2("РҐР»РµР±", "458575", 50, 50); // РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	cout << "\nGoods 2 ";
 	g2.PrintEn_Goods();
-	// Создаем, инициализируем третий объект 
-	Goods g3; // используется конструктор по умолчанию 
+	// РЎРѕР·РґР°РµРј, РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј С‚СЂРµС‚РёР№ РѕР±СЉРµРєС‚ 
+	Goods g3; // РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ 
 	g3.SetRub(400);
 	g3.SetKop(43);
-	g3.SetName("Сыр Брынза");
+	g3.SetName("РЎС‹СЂ Р‘СЂС‹РЅР·Р°");
 	g3.SetCode("856924");
 	cout << "\nGoods 3 ";
-	g3.PrintEn_Goods();// Определяем, какое занятие начнется раньше 
+	g3.PrintEn_Goods();// РћРїСЂРµРґРµР»СЏРµРј, РєР°РєРѕРµ Р·Р°РЅСЏС‚РёРµ РЅР°С‡РЅРµС‚СЃСЏ СЂР°РЅСЊС€Рµ 
 	//Goods g4=g1.Cheaper(g2);
 	//g4 = g4.Cheaper(g3);
-	//cout << "\n Товар с самой низкой стоимостью:\n";
+	//cout << "\n РўРѕРІР°СЂ СЃ СЃР°РјРѕР№ РЅРёР·РєРѕР№ СЃС‚РѕРёРјРѕСЃС‚СЊСЋ:\n";
 	//g4.PrintEn_Goods();
 	system("pause");
 	return 0;

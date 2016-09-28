@@ -1,11 +1,11 @@
-#include <iostream> 
+п»ї#include <iostream> 
 #include <cstdlib>
 #include <cmath>
 #include <clocale>
 #include <iomanip>
 #define M_PI 3.14159265358979323846
 using namespace std;
-// три подинтегральные функции
+// С‚СЂРё РїРѕРґРёРЅС‚РµРіСЂР°Р»СЊРЅС‹Рµ С„СѓРЅРєС†РёРё
 double arctg(double x)
 {
 	return atan(x)*atan(x);
@@ -21,9 +21,9 @@ double exponenta(double x)
 	return exp(-1 * x * x);
 }
 /*
-* Функция численного интегрирования методом прямоугольников.
-* Аргументы: подинтегральная функция f, пределы интегрирования niz,verh, точность вычислений TO4HOCTb
-* Количество разбиений n и предыдущаЯ сумма prevsum
+* Р¤СѓРЅРєС†РёСЏ С‡РёСЃР»РµРЅРЅРѕРіРѕ РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ РјРµС‚РѕРґРѕРј РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєРѕРІ.
+* РђСЂРіСѓРјРµРЅС‚С‹: РїРѕРґРёРЅС‚РµРіСЂР°Р»СЊРЅР°СЏ С„СѓРЅРєС†РёСЏ f, РїСЂРµРґРµР»С‹ РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ niz,verh, С‚РѕС‡РЅРѕСЃС‚СЊ РІС‹С‡РёСЃР»РµРЅРёР№ TO4HOCTb
+* РљРѕР»РёС‡РµСЃС‚РІРѕ СЂР°Р·Р±РёРµРЅРёР№ n Рё РїСЂРµРґС‹РґСѓС‰Р°РЇ СЃСѓРјРјР° prevsum
 */
 double rectangle(double(*f)(double), double niz, double verh, double TO4HOCTb)
 {
@@ -57,17 +57,17 @@ double rectangle(double(*f)(double), double niz, double verh, double TO4HOCTb)
 }
 
 /*
-* Функция численного интегрирования по правилу 3/8 Симпсона.
-* Аргументы: подинтегральная функция f, пределы интегрирования niz,verh, точность вычислений TO4HOCTb
-* Количество разбиений n и предыдущая сумма prevsum
+* Р¤СѓРЅРєС†РёСЏ С‡РёСЃР»РµРЅРЅРѕРіРѕ РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ РїРѕ РїСЂР°РІРёР»Сѓ 3/8 РЎРёРјРїСЃРѕРЅР°.
+* РђСЂРіСѓРјРµРЅС‚С‹: РїРѕРґРёРЅС‚РµРіСЂР°Р»СЊРЅР°СЏ С„СѓРЅРєС†РёСЏ f, РїСЂРµРґРµР»С‹ РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ niz,verh, С‚РѕС‡РЅРѕСЃС‚СЊ РІС‹С‡РёСЃР»РµРЅРёР№ TO4HOCTb
+* РљРѕР»РёС‡РµСЃС‚РІРѕ СЂР°Р·Р±РёРµРЅРёР№ n Рё РїСЂРµРґС‹РґСѓС‰Р°СЏ СЃСѓРјРјР° prevsum
 */
 double threeEighths(double(*f)(double), double niz, double verh, double TO4HOCTb)
 {
 
-	int n = 10; // количество разбиений
-	double h = (verh - niz) / n; // шаг
-	double sum_2 = 0; // сумма для умножения на 2
-	double sum_3 = 0; // сумма для умножения на 3
+	int n = 10; // РєРѕР»РёС‡РµСЃС‚РІРѕ СЂР°Р·Р±РёРµРЅРёР№
+	double h = (verh - niz) / n; // С€Р°Рі
+	double sum_2 = 0; // СЃСѓРјРјР° РґР»СЏ СѓРјРЅРѕР¶РµРЅРёСЏ РЅР° 2
+	double sum_3 = 0; // СЃСѓРјРјР° РґР»СЏ СѓРјРЅРѕР¶РµРЅРёСЏ РЅР° 3
 	for(int i = 1; i <= n - 1; i++)
 	{
 		sum_2 += f(niz + h*i);
@@ -76,9 +76,9 @@ double threeEighths(double(*f)(double), double niz, double verh, double TO4HOCTb
 	{
 		sum_3 += f(niz + i*h + h / 3) + f(niz + i*h + (2 * h) / 3);
 	}
-	double sum = h / 8 * (f(verh) + f(niz) + 2 * sum_2 + 3 * sum_3); // итоговая сумма
-	double prevsum = 0; // задаём как предыдущую сумму 0, чтобы программа работала
-	while(abs((sum - prevsum) / 15) > TO4HOCTb) // проверяем точность по правилу Рунге
+	double sum = h / 8 * (f(verh) + f(niz) + 2 * sum_2 + 3 * sum_3); // РёС‚РѕРіРѕРІР°СЏ СЃСѓРјРјР°
+	double prevsum = 0; // Р·Р°РґР°С‘Рј РєР°Рє РїСЂРµРґС‹РґСѓС‰СѓСЋ СЃСѓРјРјСѓ 0, С‡С‚РѕР±С‹ РїСЂРѕРіСЂР°РјРјР° СЂР°Р±РѕС‚Р°Р»Р°
+	while(abs((sum - prevsum) / 15) > TO4HOCTb) // РїСЂРѕРІРµСЂСЏРµРј С‚РѕС‡РЅРѕСЃС‚СЊ РїРѕ РїСЂР°РІРёР»Сѓ Р СѓРЅРіРµ
 	{
 		n *= 2;
 		prevsum = sum;
@@ -98,14 +98,14 @@ double threeEighths(double(*f)(double), double niz, double verh, double TO4HOCTb
 	}
 	return sum;
 }
-//тип возврата имя переменной аргументы = присвоение массива
+//С‚РёРї РІРѕР·РІСЂР°С‚Р° РёРјСЏ РїРµСЂРµРјРµРЅРЅРѕР№ Р°СЂРіСѓРјРµРЅС‚С‹ = РїСЂРёСЃРІРѕРµРЅРёРµ РјР°СЃСЃРёРІР°
 double(*integral[3])(double) = {arctg, sinus, exponenta};
 
 int main()
 {
 	setlocale(LC_ALL, "russian");
 	double a, b, c, d, TO4HOCTb = 0.1;
-	cout << "Введите пределы интегрирования a, b (b>a) и c, d (d>c) и точность" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РїСЂРµРґРµР»С‹ РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ a, b (b>a) Рё c, d (d>c) Рё С‚РѕС‡РЅРѕСЃС‚СЊ" << endl;
 
 	cin >> a >> b >> c >> d >> TO4HOCTb;
 
@@ -113,7 +113,7 @@ int main()
 	{
 		if(a > b || c > d)
 		{
-			cout << "Значения введены неверно. Введите заново.";
+			cout << "Р—РЅР°С‡РµРЅРёСЏ РІРІРµРґРµРЅС‹ РЅРµРІРµСЂРЅРѕ. Р’РІРµРґРёС‚Рµ Р·Р°РЅРѕРІРѕ.";
 			cin >> a >> b >> c >> d;
 		}
 		else break;
@@ -129,9 +129,9 @@ int main()
 	threeEighthsSum += threeEighths(integral[2], a, b, TO4HOCTb);
 
 	cout <<  setprecision(16);
-	cout << "Сумма интегралов по правилу прямоугольника: " << rectangleSum << endl;
-	cout << "Сумма интегралов по правилу 3/8: " << threeEighthsSum << endl;
-	cout << "Разница в вычислениях:" << abs(rectangleSum - threeEighthsSum) << endl;
+	cout << "РЎСѓРјРјР° РёРЅС‚РµРіСЂР°Р»РѕРІ РїРѕ РїСЂР°РІРёР»Сѓ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°: " << rectangleSum << endl;
+	cout << "РЎСѓРјРјР° РёРЅС‚РµРіСЂР°Р»РѕРІ РїРѕ РїСЂР°РІРёР»Сѓ 3/8: " << threeEighthsSum << endl;
+	cout << "Р Р°Р·РЅРёС†Р° РІ РІС‹С‡РёСЃР»РµРЅРёСЏС…:" << abs(rectangleSum - threeEighthsSum) << endl;
 
 	system("pause");
 	return 0;

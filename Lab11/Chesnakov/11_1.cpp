@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <clocale>
 using namespace std;	 
 void summa (float d1, float m1, float d2, float m2)
@@ -7,8 +7,8 @@ void summa (float d1, float m1, float d2, float m2)
 	float summ;
 	sumd = d1+d2;
 	summ = m1+m2;
-	cout<<"Äåéñòâèòåëüíàÿ ÷àñòü:"<<sumd<<endl;
-	cout<<"Ìíèìàÿ ÷àñòü:"<<summ<<"i"<<endl;
+	cout<<"Ð”ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ:"<<sumd<<endl;
+	cout<<"ÐœÐ½Ð¸Ð¼Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ:"<<summ<<"i"<<endl;
 }
 void raznost (float d1, float m1, float d2, float m2)
 {
@@ -18,8 +18,8 @@ void raznost (float d1, float m1, float d2, float m2)
 	m2=m2*-1;
 	rd = d1-d2;
 	rm = m1-m2;
-	cout<<"Äåéñòâèòåëüíàÿ ÷àñòü:"<<rd<<endl;
-	cout<<"Ìíèìàÿ ÷àñòü:"<<rm<<"i"<<endl;
+	cout<<"Ð”ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ:"<<rd<<endl;
+	cout<<"ÐœÐ½Ð¸Ð¼Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ:"<<rm<<"i"<<endl;
 
 
 }
@@ -29,8 +29,8 @@ void raznost (float d1, float m1, float d2, float m2)
 	float pm;
 	pd = (d1*d2)-(m1*m2);
 	pm = (d1*m2)+(m1*d2);
-	cout<<"Äåéñòâèòåëüíàÿ ÷àñòü:"<<pd<<endl;
-	cout<<"Ìíèìàÿ ÷àñòü:"<<pm<<"i"<<endl;
+	cout<<"Ð”ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ:"<<pd<<endl;
+	cout<<"ÐœÐ½Ð¸Ð¼Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ:"<<pm<<"i"<<endl;
 
  }
 typedef void(*MENU)(float, float, float, float);
@@ -39,18 +39,18 @@ int main ()
 	 {
 	 setlocale (LC_ALL, "russian");
 	 int a1, a2, b1, b2 ;
-	 	cout << "Ââåäèòå äåéñòâèòåëüíóþ è ìíèìóþ ÷àñòü ïåðâîãî ÷èñëà:" << endl;
+	 	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ‚ÐµÐ»ÑŒÐ½ÑƒÑŽ Ð¸ Ð¼Ð½Ð¸Ð¼ÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°:" << endl;
 	    cin >> a1>>b1;
-		cout << "Ââåäèòå äåéñòâèòåëüíóþ è ìíèìóþ ÷àñòü âòîðîãî ÷èñëà:" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ‚ÐµÐ»ÑŒÐ½ÑƒÑŽ Ð¸ Ð¼Ð½Ð¸Ð¼ÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°:" << endl;
 		cin>> a2>>b2;
 		int N;
-		cout << endl << "                    Ìåíþ:" << endl;
+		cout << endl << "                    ÐœÐµÐ½ÑŽ:" << endl;
 		cout << "_____________________________________________________" << endl;
-		cout << "  1 - Ñóììà" << endl;
-		cout << "  2 - Ðàçíîñòü" << endl; 
-		cout << "  3 - Ïðîèçâåäåíèå" << endl;
+		cout << "  1 - Ð¡ÑƒÐ¼Ð¼Ð°" << endl;
+		cout << "  2 - Ð Ð°Ð·Ð½Ð¾ÑÑ‚ÑŒ" << endl; 
+		cout << "  3 - ÐŸÑ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ" << endl;
 		cout << "_____________________________________________________" << endl;
-		cout <<"Ââåäèòå íîìåp ïóíêòà ìåíþ:"<< endl;
+		cout <<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼Ðµp Ð¿ÑƒÐ½ÐºÑ‚Ð° Ð¼ÐµÐ½ÑŽ:"<< endl;
 		cin >> N;
 		(*calc[N-1])(a1, b1, a2, b2);
 		cout << endl;

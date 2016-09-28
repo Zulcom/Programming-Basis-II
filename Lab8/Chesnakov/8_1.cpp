@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <fstream>
 #include <string>
 #include <clocale>
@@ -13,7 +13,7 @@ struct journal
 	  coast;
 	journal *rlink, *llink;
 };
-//Ôóíêöèÿ çàïèñè äâóñâÿçíîãî ñïèñêà â áèíàðíûé ôàéë ñëåâà íàïpàâî
+//Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ð´Ð²ÑƒÑÐ²ÑÐ·Ð½Ð¾Ð³Ð¾ ÑÐ¿Ð¸ÑÐºÐ° Ð² Ð±Ð¸Ð½Ð°Ñ€Ð½Ñ‹Ð¹ Ñ„Ð°Ð¹Ð» ÑÐ»ÐµÐ²Ð° Ð½Ð°Ð¿pÐ°Ð²Ð¾
 void llist (journal *left , FILE *fbw)
 {
    journal *k = left;
@@ -31,11 +31,11 @@ int main ()
 {
 	setlocale(LC_ALL, "russian");
 	ifstream ft("laba7.txt");
-	journal *right1, *left1, *k1, *q1, // right1(2) è left1(2) - ïðàâûå è ëåâûå óêàçàòåëè
-		   *right2, *left2, *k2, *q2; // k1(2) è q1(2) - ðàáî÷èå óêàçàòåëè, q1(2) - âòîðîé ðàáî÷èé óêàçàòåëü õðàíèò àäðåñ ïðåäïîñëåäíåãî óçëà
+	journal *right1, *left1, *k1, *q1, // right1(2) Ð¸ left1(2) - Ð¿Ñ€Ð°Ð²Ñ‹Ðµ Ð¸ Ð»ÐµÐ²Ñ‹Ðµ ÑƒÐºÐ°Ð·Ð°Ñ‚ÐµÐ»Ð¸
+		   *right2, *left2, *k2, *q2; // k1(2) Ð¸ q1(2) - Ñ€Ð°Ð±Ð¾Ñ‡Ð¸Ðµ ÑƒÐºÐ°Ð·Ð°Ñ‚ÐµÐ»Ð¸, q1(2) - Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹ Ñ€Ð°Ð±Ð¾Ñ‡Ð¸Ð¹ ÑƒÐºÐ°Ð·Ð°Ñ‚ÐµÐ»ÑŒ Ñ…Ñ€Ð°Ð½Ð¸Ñ‚ Ð°Ð´Ñ€ÐµÑ Ð¿Ñ€ÐµÐ´Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÐµÐ³Ð¾ ÑƒÐ·Ð»Ð°
 	string namen,themen;
 	int coastn, koln;
-    // Ñîçäàíèå ïåðâûõ ïóñòûõ óçëîâ 
+    // Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¿ÐµÑ€Ð²Ñ‹Ñ… Ð¿ÑƒÑÑ‚Ñ‹Ñ… ÑƒÐ·Ð»Ð¾Ð² 
 	k1 = new journal;
 	k1 -> rlink = NULL;
 	k1 -> llink = NULL;
@@ -59,7 +59,7 @@ int main ()
 		cout << koln;
 		cout.width(20);
 		cout << themen << endl;
-		// Ñîçäàíèå îñòàëüíûõ óçëîâ, çàïîëíåíèå è ôèëüòðàöèÿ
+		// Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¾ÑÑ‚Ð°Ð»ÑŒÐ½Ñ‹Ñ… ÑƒÐ·Ð»Ð¾Ð², Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ð¸ Ñ„Ð¸Ð»ÑŒÑ‚Ñ€Ð°Ñ†Ð¸Ñ
 		if (koln<1000)
         {
 			 k1 = new journal;
@@ -88,7 +88,7 @@ int main ()
 	left1 = q1;
 	q2 -> llink = NULL;
 	left2 = q2;
-	//Óäàëåíèå ïóñòûõ ïðàâûõ óçëîâ
+	//Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð¿ÑƒÑÑ‚Ñ‹Ñ… Ð¿Ñ€Ð°Ð²Ñ‹Ñ… ÑƒÐ·Ð»Ð¾Ð²
 	k1 = right1;
 	q1 = k1;
     right1 = k1->llink;
@@ -105,9 +105,9 @@ int main ()
 
 	FILE *fbw1, *fbw2;
     char namef1[11], namef2[11];
-	cout << "Èìÿ äëÿ æóðíàëîâ ìåíüøå 1000:" << endl;
+	cout << "Ð˜Ð¼Ñ Ð´Ð»Ñ Ð¶ÑƒÑ€Ð½Ð°Ð»Ð¾Ð² Ð¼ÐµÐ½ÑŒÑˆÐµ 1000:" << endl;
     cin >> namef1;
-    cout << "Äëÿ îñòàëüíûõ:" << endl;
+    cout << "Ð”Ð»Ñ Ð¾ÑÑ‚Ð°Ð»ÑŒÐ½Ñ‹Ñ…:" << endl;
     cin >> namef2;
     fbw1 = fopen(namef1, "wb");
     fbw2 = fopen(namef2, "wb");
@@ -120,10 +120,10 @@ int main ()
     fbr2 = fopen(namef2, "rb");
     rewind(fbr1);
     rewind(fbr2);
-	cout <<endl << "Æóðíàëû ìåíüøå 1000:" << endl;
+	cout <<endl << "Ð–ÑƒÑ€Ð½Ð°Ð»Ñ‹ Ð¼ÐµÐ½ÑŒÑˆÐµ 1000:" << endl;
     k1 = new journal;
 	cout<<"____________________________________________________________\n";
-	// ×òåíèå äâóñâÿçíîãî ñïèñêà èç áèíàðíîãî ôàéëà
+	// Ð§Ñ‚ÐµÐ½Ð¸Ðµ Ð´Ð²ÑƒÑÐ²ÑÐ·Ð½Ð¾Ð³Ð¾ ÑÐ¿Ð¸ÑÐºÐ° Ð¸Ð· Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ñ„Ð°Ð¹Ð»Ð°
 	while (fread (&k1 ->name, sizeof(string), 1, fbr1) && fread (&k1 ->coast, sizeof(int), 1, fbr1) && fread (&k1 ->kol, sizeof(int), 1, fbr1) && fread (&k1 ->theme, sizeof(string), 1, fbr1))
 {
 	    k1 -> llink = right1;
@@ -138,10 +138,10 @@ int main ()
 		cout << k1 -> theme << endl;
 }
 	cout<<"____________________________________________________________\n";
-	cout << endl << "Äðóãèå æóðíàëû:" << endl;
+	cout << endl << "Ð”Ñ€ÑƒÐ³Ð¸Ðµ Ð¶ÑƒÑ€Ð½Ð°Ð»Ñ‹:" << endl;
 	k2 = new journal;
 	cout<<"____________________________________________________________\n";
-		// ×òåíèå äâóñâÿçíîãî ñïèñêà èç áèíàðíîãî ôàéëà
+		// Ð§Ñ‚ÐµÐ½Ð¸Ðµ Ð´Ð²ÑƒÑÐ²ÑÐ·Ð½Ð¾Ð³Ð¾ ÑÐ¿Ð¸ÑÐºÐ° Ð¸Ð· Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ñ„Ð°Ð¹Ð»Ð°
 	while (fread (&k2 ->name, sizeof(string), 1, fbr2) && fread (&k2 ->coast, sizeof(int), 1, fbr2) && fread (&k2 ->kol, sizeof(int), 1, fbr2) && fread (&k2 ->theme, sizeof(string), 1, fbr2))
 {
 		k2 -> llink = right2;

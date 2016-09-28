@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <fstream>
 #include <clocale>
 
@@ -14,12 +14,12 @@ int main()
 	fseek(output, l, SEEK_SET);
     fread(&n, l,1,output);
     fread(&m, l,1,output);
-	cout<<"Ââåäèòå k: ";
+	cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ k: ";
     cin>>k;
 	k=k--;
 	if(k>n)
 	{
-		cout<<"Ïðåâûøåíî çíà÷åíèå k"<<endl;
+		cout<<"ÐŸÑ€ÐµÐ²Ñ‹ÑˆÐµÐ½Ð¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ k"<<endl;
 		system("pause");
 	}
     int *a= new int [m];
@@ -40,7 +40,7 @@ fwrite(a,sizeof(int),m,output);
 fclose(output);
 output=fopen("2.txt","rb");
 fseek (output,m*l*k,SEEK_SET);
-cout<<"Ôàéë ïîñëå îáíîâëåíèÿ:"<<endl;
+cout<<"Ð¤Ð°Ð¹Ð» Ð¿Ð¾ÑÐ»Ðµ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ñ:"<<endl;
 for(int i=0;i<n;i++)
 {
    fread(a,sizeof(int),m,output);

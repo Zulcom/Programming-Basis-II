@@ -9,7 +9,7 @@ void main()
 	setlocale(LC_ALL, "russian");
 	const int N1 = 100, M1 = 100; 
 int a [N1][M1], i=0, j=0, n, m;
-cout<<"Ââåäèòå ÷èñëî ñòpîê è ñòîëáöîâ ìàññèâà:";
+cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ ÑÑ‚pÐ¾Ðº Ð¸ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°:";
 cin>>n>>m;
 	for (i=0;i<n;i++)
 {
@@ -22,7 +22,7 @@ file << a[i][j] << " ";
 file << endl; }
 	 file.close();
 	 ifstream rez("out.txt");
-cout<<" Ïîëó÷åííûé ìàññèâ \n"<<endl;
+cout<<" ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² \n"<<endl;
 	 for (int i=0; i<n; i++) {
 		 for (int j=0; j<m; j++) {
 			 rez >> a[i][j];

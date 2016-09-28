@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <list>
 #include <algorithm>
 #include <fstream>
@@ -6,7 +6,7 @@ using namespace std;
 bool compare(int a, int b){return b>a;}
 bool negative(int a){return a<0;}
 void printSeq(list<int> data){
-	std::list<int>::iterator p; // list такое множество в которое можно записывать данные любого типа
+	std::list<int>::iterator p; // list С‚Р°РєРѕРµ РјРЅРѕР¶РµСЃС‚РІРѕ РІ РєРѕС‚РѕСЂРѕРµ РјРѕР¶РЅРѕ Р·Р°РїРёСЃС‹РІР°С‚СЊ РґР°РЅРЅС‹Рµ Р»СЋР±РѕРіРѕ С‚РёРїР°
 	for (p = data.begin(); p != data.end(); ++p) cout << *p << " "; 
 }
 int main()

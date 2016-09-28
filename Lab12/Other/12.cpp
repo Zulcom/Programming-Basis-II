@@ -1,4 +1,4 @@
-#include <stdio.h>
+п»ї#include <stdio.h>
 #include <cmath>
 #include <iostream>
 
@@ -25,7 +25,7 @@ float CalcIntegral(float a, float b, int n)
 
   float result = 0;
 
-  float h = (b - a) / n; //Шаг сетки
+  float h = (b - a) / n; //РЋР°Рі СЃРµС‚РєРё
   float h2 = (d - c)/n;
   float h3 = (3.14 - 0)/n;
 

@@ -1,4 +1,4 @@
-void tria (int xa, int ya, int xb, int yb, int xc, int yc, int n) {
+﻿void tria (int xa, int ya, int xb, int yb, int xc, int yc, int n) {
     int xp, yp, yq, xq, xr, yr;
     if ( n>0 ) {
         xp = (xb+xc)/2; yp = (yb+yc)/2;

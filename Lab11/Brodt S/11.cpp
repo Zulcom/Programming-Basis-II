@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <list>
 using namespace std;
 
@@ -8,11 +8,11 @@ int main() {
 	list<int> a, b;
 	list<int>::iterator iterA, iterB;
 	int t, temp;
-	puts("Ââåäèòå êîëè÷åñòâî ıëåìåíòîâ");
+	puts("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²");
 	cin>>t;
 	a.resize(t);
 	b.resize(t);
-	puts("Ââåäèòå ıëåìåíòû");
+	puts("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ñ‹");
 	for(iterA = a.begin(), iterB = b.begin(); iterA != a.end(); iterA++, iterB++){
 		cin>>*iterA;
 		if(iterB == b.begin()){
@@ -32,12 +32,12 @@ int main() {
 	iterB++;
 	a.erase(iterA);
 	b.erase(iterB);
-	puts("Ìàññèâ A");
+	puts("ĞœĞ°ÑÑĞ¸Ğ² A");
 	for(iterA = a.begin(); iterA != a.end(); iterA++){
 		cout<<*iterA<<' ';
 	}
 	cout<<'\n';
-	puts("Ìàññèâ B");
+	puts("ĞœĞ°ÑÑĞ¸Ğ² B");
 	for(iterB = b.begin(); iterB != b.end();  iterB++){
 		cout<<*iterB<<' ';
 	}

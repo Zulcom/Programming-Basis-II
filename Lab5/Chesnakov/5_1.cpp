@@ -1,4 +1,4 @@
-#include <windows.h>
+ï»¿#include <windows.h>
 #include <fstream> 
 #include<clocale>
 #include<iostream>
@@ -37,7 +37,7 @@ for(int i=0;i<n;i++)
    fscanf(f1,"%s",&A[i].VK);
 }
 fclose(f1);
-cout<<"Ââåäèòå íàçâàíèå ôàéëà: "<<endl;
+cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ñ„Ð°Ð¹Ð»Ð°: "<<endl;
 cin>>fname;
 f2=fopen(fname,"wb");
 for(int i=0;i<n;i++)
@@ -60,8 +60,8 @@ fclose(f2);
 
 
 
-cout<<"1 ôàéë:"<<endl;
-cout<<"Ôàìèëèÿ        Âîçðàñò        Êóðñ       Êàôåäðà"<<endl;
+cout<<"1 Ñ„Ð°Ð¹Ð»:"<<endl;
+cout<<"Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ        Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚        ÐšÑƒÑ€Ñ       ÐšÐ°Ñ„ÐµÐ´Ñ€Ð°"<<endl;
 for(int i=0;i<n;i++)
 {
     cout.setf(ios::left);
@@ -82,8 +82,8 @@ for(int i=0;i<n1;i++)
 }
 fclose(f2);
 
-cout<<"2 ôàéë:"<<endl;
-cout<<"Ôàìèëèÿ        Âîçðàñò        Êóðñ        Êàôåäðà"<<endl;;
+cout<<"2 Ñ„Ð°Ð¹Ð»:"<<endl;
+cout<<"Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ        Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚        ÐšÑƒÑ€Ñ        ÐšÐ°Ñ„ÐµÐ´Ñ€Ð°"<<endl;;
 for(int i=0;i<n1;i++)
 {
 	cout.setf(ios::left);
