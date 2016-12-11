@@ -1,0 +1,73 @@
+﻿#include <iostream> 
+#include <fstream>
+#include <stdio.h>
+#include <conio.h>
+#include <clocale>
+using namespace std;
+struct node
+{
+	int info;
+	int c;
+	node *llink, *rlink;
+};
+node *tree(node *p, int buf)
+{
+	if(p == NULL)
+	{
+		p = new node;
+		p->info = buf;
+		p->llink = NULL;
+		p->rlink = NULL;
+		p->c = 1;
+	}
+	else
+		if(buf == p->info)
+			p->c = p->c + 1;
+		else
+			if(buf < p->info)
+				p->llink = tree(p->llink, buf);
+			else
+				p->rlink = tree(p->rlink, buf);
+	return p;
+}
+void obhod(node *p,int n)
+{
+	if(p->rlink) obhod(p->rlink, n + 1);
+	for(int i = 0; i < n; i++)
+		cout << " ";
+	cout  << p->info << " ("  << p->c <<")" <<endl;
+	if(p->llink) obhod(p->llink, n + 1);
+	
+}
+int tree_sum_right_branch(node *p)
+{
+	int sum = 0;
+	while(p != NULL)
+	{
+		sum += p->info;
+		p = p->rlink;
+	}
+	return sum;
+}
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	node *p;
+	int buf, n, k;
+	p = NULL;
+	cout << "Введите количество цифр: ";
+	cin >> k;
+	for(int i = 0; i < k; ++i)
+	{
+		cout << "Введите число: ";
+		cin >> buf;
+		p = tree(p, buf);
+	}
+	cout << endl << "Построенное дерево:" << endl;
+	obhod(p,0);
+	cout << "Cумма правого дерева начиная с корня: ";
+	cout << tree_sum_right_branch(p);
+	cout << endl;
+	system("pause.exe");
+	return 0;
+}
