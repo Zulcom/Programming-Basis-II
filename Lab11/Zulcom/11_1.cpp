@@ -1,4 +1,4 @@
-#include <iostream> 
+ï»¿#include <iostream> 
 using namespace std;
 void summaBolshe0(int * BBEDENIY,int PA3MEP)
 {
@@ -7,7 +7,7 @@ void summaBolshe0(int * BBEDENIY,int PA3MEP)
 	{
 		if(BBEDENIY[i] > 0) sum += BBEDENIY[i]; 
 	}
-	cout << "Ñóììà ïîëîæèòåëüíûõ ýëåìåíòîâ: " << sum <<endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ð¿Ð¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: " << sum <<endl;
 }
 void max(int * BBEDENIY, int PA3MEP)
 {
@@ -16,7 +16,7 @@ void max(int * BBEDENIY, int PA3MEP)
 	{
 		if(BBEDENIY[i] > max) max = BBEDENIY[i]; 
 	}
-	cout << "Ìàêñèìàëüíûé ýëåìåíò: " << max <<endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: " << max <<endl;
 }
 
 void chaweBcero(int * BBEDENIY, int PA3MEP)
@@ -34,7 +34,7 @@ void chaweBcero(int * BBEDENIY, int PA3MEP)
     }
        for (int i = 0; i< PA3MEP; i++)
           BBEDENIY[i] = BBEDENIY[i]%PA3MEP; 
-          cout << "Ñàìûé ÷àñòîâñòðå÷àåìûé ýëåìåíò: " <<result <<endl;
+          cout << "Ð¡Ð°Ð¼Ñ‹Ð¹ Ñ‡Ð°ÑÑ‚Ð¾Ð²ÑÑ‚Ñ€ÐµÑ‡Ð°ÐµÐ¼Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: " <<result <<endl;
              for (int i = 0; i< PA3MEP; i++) cout << BBEDENIY[i];
              cout <<endl;
 
@@ -43,7 +43,7 @@ void(*yka3ateli_na_func[3]) (int*,int) = {summaBolshe0, max, chaweBcero};
 int main(){ 
 	setlocale(LC_ALL, "Russian"); 
 	int HOMEP_PUHKTA, PA3MEP; 
-	cout << "Ââåäèòå ðàçìåð ìàññèâà: "; cin >> PA3MEP; 
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°: "; cin >> PA3MEP; 
 		int *  BBEDENIY = new int[PA3MEP]; 
 		for(int i = 0; i < PA3MEP; i++) 
 		{
@@ -51,18 +51,18 @@ int main(){
 			cin >> BBEDENIY[i];
 		}
 	cout 
-		<< "1 - Ñóììà ïîëîæèòåëüíûõ ýëåìåíòîâ " << endl
-		<< "2 - Çíà÷åíèå ìàêñèìàëüíîãî ýëåìåíòà" << endl
-		<< "3 - Çíà÷åíèå ýëåìåíòà,êîòîðûé ÷àùå âñåãî âñòðå÷àåòñÿ â ýòîì ìàññèâå" << endl
-		<< "4 - Âûõîä" <<endl;
+		<< "1 - Ð¡ÑƒÐ¼Ð¼Ð° Ð¿Ð¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² " << endl
+		<< "2 - Ð—Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°" << endl
+		<< "3 - Ð—Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°,ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ñ‡Ð°Ñ‰Ðµ Ð²ÑÐµÐ³Ð¾ Ð²ÑÑ‚Ñ€ÐµÑ‡Ð°ÐµÑ‚ÑÑ Ð² ÑÑ‚Ð¾Ð¼ Ð¼Ð°ÑÑÐ¸Ð²Ðµ" << endl
+		<< "4 - Ð’Ñ‹Ñ…Ð¾Ð´" <<endl;
 	while(true) 
 	{
 		while(true) 
 		{ 
-			cout << "Ââåäèòå íîìåð ïóíêòà ìåíþ: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð¿ÑƒÐ½ÐºÑ‚Ð° Ð¼ÐµÐ½ÑŽ: ";
 			cin >> HOMEP_PUHKTA;
 			if(HOMEP_PUHKTA >= 1 && HOMEP_PUHKTA <= 4) break; 
-			cout << "Îøèáêà â íîìåðå ïóíêòà" <<endl;
+			cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð² Ð½Ð¾Ð¼ÐµÑ€Ðµ Ð¿ÑƒÐ½ÐºÑ‚Ð°" <<endl;
 		}
 		if(HOMEP_PUHKTA == 4){
 		delete[] BBEDENIY;

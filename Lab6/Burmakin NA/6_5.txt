@@ -1,0 +1,83 @@
+#include <cmath>
+#include <clocale>
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+struct node
+{
+	int info;
+	node *link;
+};
+int prod(node * l)
+{
+	int prod = 1;
+	node * k = l;
+	while(k != NULL)
+	{
+		if(k->info != 0) prod *= k->info;
+		k = k->link;
+	}
+	if (prod !=1)
+	return prod;
+	else return 0; 
+}
+void print(node * left)
+{
+	node * k = left;
+	while(k != NULL)
+	{
+		cout << k->info << " ";
+		k = k->link;
+	}
+	cout << endl;
+}
+
+int main()
+{
+	srand(time(0));
+	setlocale(LC_ALL, "Rus");
+	int inputData, N;
+	node *thisNode, *left, *right;
+
+	cout << "Введите количество элементов: ";
+	cin >> N;
+	cout << "Bведите число: ";
+	cin >> inputData;
+	/* Первый элемент*/
+	thisNode = new node;
+	thisNode->link = NULL;
+	thisNode->info = inputData;
+	left = right = thisNode;
+	/* Заполнение остальных элементов */
+	for(int i = 0; i < N - 1; ++i)
+	{
+		cout << "Bведите число: ";
+		cin >> inputData;
+		thisNode = new node;
+		thisNode->link = NULL;
+		thisNode->info = inputData;
+		right->link = thisNode; // Добавление узла справа
+		right = thisNode;
+	}
+	cout << "Cписок до преобразования: ";
+	print(left);
+	/*Добавление узлов */
+	thisNode = new node;
+	thisNode->link = NULL;
+	thisNode->info = prod(left);
+	right->link = thisNode;
+	right = thisNode;
+	cout << "После добавления узлов: ";
+	print(left);
+	node *k;
+	/*clear quenue */
+	while(left->link != NULL)
+	{
+		k = left;
+		left = left->link;
+		delete[] k;
+	}
+	system("pause.exe");
+	return 0;
+}
