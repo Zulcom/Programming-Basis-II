@@ -74,6 +74,8 @@ void insertRowBin(int*A, int k)
 	int n, m;
 	in.read(reinterpret_cast<char*>(&n), sizeof(n));
 	in.read(reinterpret_cast<char*>(&m), sizeof(m));
+	out.write(reinterpret_cast<char*>(&N), sizeof(N));
+	out.write(reinterpret_cast<char*>(&M), sizeof(M));
 	int* ioBuffer = new int[m];
 	for(int i = 0; i < n; i++)
 	{
