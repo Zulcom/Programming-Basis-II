@@ -6,9 +6,9 @@
 
 К сожалению, Wiki ещё недостаточно полон для абсолюного понимания задач и хода их решений, но он будет восполняться по мете возможностей.
 ## Связь с автором репозитория
--  Личная страница ВК: [Семён Муравьёв] (https://vk.com/sem0n)
+-  Личная страница ВК: [Семён Муравьёв](https://vk.com/sem0n)
 -  E-mail: s01@ngs.ru
--  [Github Issues] (https://github.com/Zulcom/Programming-Basis-II/issues)
+-  [Github Issues](https://github.com/Zulcom/Programming-Basis-II/issues)
 
 ## Зачем это нужно?
 Данный репозиторий поможет в основном студентам. Вот список основных причин:</br>
@@ -25,7 +25,7 @@ git clone https://github.com/Zulcom/Programming-Basis-II.git
 В каждой папке Zulcom вы можете найти файл Report.odt – мой отчёт по лабораторной работе.</br>
 В данном отчёте подробно изложена задача, алгоритмы её решения, а так же полученные результаты.</br>
 В кадой папке Zuclom есть файл .png который содержит блок-схему к данному алгоритму,</br>
-а так же файл Graph.graphml -- исходный файл блок-схемы, нарисованной мною в программе [yEd Graph Editor.] (http://www.yworks.com/products/yed/download)
+а так же файл Graph.graphml -- исходный файл блок-схемы, нарисованной мною в программе [yEd Graph Editor.](http://www.yworks.com/products/yed/download)
 ## Системы разработки, которыми мы пользовались
 ##### 1) Visual studio 2008/2015
 ##### 2) Dev-C++ (TDM-GCC 4.9.2)
